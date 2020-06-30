@@ -18,6 +18,12 @@ const Routes: Array<{
     icon: "person",
     children: ["ionic"],
   },
+  {
+    type: "static",
+    title: "Tabs",
+    url: "/home",
+    icon: "home",
+  },
 ];
 
 export { Routes };

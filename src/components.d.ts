@@ -15,6 +15,12 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface AppTabDashboard {
+    }
+    interface AppTabHome {
+    }
+    interface AppTabs {
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -41,11 +47,32 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLAppTabDashboardElement extends Components.AppTabDashboard, HTMLStencilElement {
+    }
+    var HTMLAppTabDashboardElement: {
+        prototype: HTMLAppTabDashboardElement;
+        new (): HTMLAppTabDashboardElement;
+    };
+    interface HTMLAppTabHomeElement extends Components.AppTabHome, HTMLStencilElement {
+    }
+    var HTMLAppTabHomeElement: {
+        prototype: HTMLAppTabHomeElement;
+        new (): HTMLAppTabHomeElement;
+    };
+    interface HTMLAppTabsElement extends Components.AppTabs, HTMLStencilElement {
+    }
+    var HTMLAppTabsElement: {
+        prototype: HTMLAppTabsElement;
+        new (): HTMLAppTabsElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-menu": HTMLAppMenuElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "app-tab-dashboard": HTMLAppTabDashboardElement;
+        "app-tab-home": HTMLAppTabHomeElement;
+        "app-tabs": HTMLAppTabsElement;
     }
 }
 declare namespace LocalJSX {
@@ -58,11 +85,20 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface AppTabDashboard {
+    }
+    interface AppTabHome {
+    }
+    interface AppTabs {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-menu": AppMenu;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "app-tab-dashboard": AppTabDashboard;
+        "app-tab-home": AppTabHome;
+        "app-tabs": AppTabs;
     }
 }
 export { LocalJSX as JSX };
@@ -73,6 +109,9 @@ declare module "@stencil/core" {
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "app-tab-dashboard": LocalJSX.AppTabDashboard & JSXBase.HTMLAttributes<HTMLAppTabDashboardElement>;
+            "app-tab-home": LocalJSX.AppTabHome & JSXBase.HTMLAttributes<HTMLAppTabHomeElement>;
+            "app-tabs": LocalJSX.AppTabs & JSXBase.HTMLAttributes<HTMLAppTabsElement>;
         }
     }
 }
