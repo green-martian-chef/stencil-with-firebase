@@ -1,4 +1,5 @@
 import { Component, ComponentInterface, Host, h } from "@stencil/core";
+import { Routes } from "../../routes";
 
 @Component({
   tag: "app-menu",
@@ -6,22 +7,22 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
   shadow: true,
 })
 export class AppMenu implements ComponentInterface {
+  routes = Routes;
+
   render() {
     return (
       <Host>
         <ion-menu side="start" menuId="first" contentId="main">
-          <ion-header>
-            <ion-toolbar color="primary">
-              <ion-title>Start Menu</ion-title>
-            </ion-toolbar>
-          </ion-header>
           <ion-content>
             <ion-list>
-              <ion-item>Menu Item</ion-item>
-              <ion-item>Menu Item</ion-item>
-              <ion-item>Menu Item</ion-item>
-              <ion-item>Menu Item</ion-item>
-              <ion-item>Menu Item</ion-item>
+              <ion-menu-toggle>
+                {this.routes.map((route) => (
+                  <ion-item href={route.url}>
+                    <ion-icon name={route.icon} slot="start" />
+                    <ion-label>{route.title}</ion-label>
+                  </ion-item>
+                ))}
+              </ion-menu-toggle>
             </ion-list>
           </ion-content>
         </ion-menu>
