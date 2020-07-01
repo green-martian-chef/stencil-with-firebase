@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, Host, h } from "@stencil/core";
+import { Component, ComponentInterface, h } from "@stencil/core";
+import { NavBar } from "../app-navbar/app-navbar";
 
 @Component({
   tag: "app-tab-home",
@@ -7,27 +8,18 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
 })
 export class AppTabHome implements ComponentInterface {
   render() {
-    return (
-      <Host>
-        <ion-header>
-          <ion-toolbar color="primary">
-            <ion-title>Home</ion-title>
-            <ion-buttons slot="end">
-              <ion-menu-button />
-            </ion-buttons>
-          </ion-toolbar>
-        </ion-header>
+    return [
+      <NavBar title="Home" />,
 
-        <ion-content fullscreen class="ion-padding">
-          <p>
-            Welcome to the PWA Toolkit. You can use this starter to build entire
-            apps with web components using Stencil and ionic/core! Check out the
-            README for everything that comes in this starter out of the box and
-            check out our docs on{" "}
-            <a href="https://stenciljs.com">stenciljs.com</a> to get started.
-          </p>
-        </ion-content>
-      </Host>
-    );
+      <ion-content fullscreen class="ion-padding">
+        <p>
+          Welcome to the PWA Toolkit. You can use this starter to build entire
+          apps with web components using Stencil and ionic/core! Check out the
+          README for everything that comes in this starter out of the box and
+          check out our docs on{" "}
+          <a href="https://stenciljs.com">stenciljs.com</a> to get started.
+        </p>
+      </ion-content>,
+    ];
   }
 }

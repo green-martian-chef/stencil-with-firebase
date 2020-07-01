@@ -1,4 +1,5 @@
 import { Component, h } from "@stencil/core";
+import { NavBar } from "../app-navbar/app-navbar";
 
 @Component({
   tag: "app-home",
@@ -7,14 +8,7 @@ import { Component, h } from "@stencil/core";
 export class AppHome {
   render() {
     return [
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Home</ion-title>
-          <ion-buttons slot="end">
-            <ion-menu-button />
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>,
+      <NavBar title="Home" />,
 
       <ion-content class="ion-padding">
         <p>
