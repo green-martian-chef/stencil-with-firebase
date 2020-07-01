@@ -4,7 +4,6 @@ import { NavBar } from "../app-navbar/app-navbar";
 @Component({
   tag: "app-tab-home",
   styleUrl: "app-tab-home.css",
-  shadow: true,
 })
 export class AppTabHome implements ComponentInterface {
   render() {

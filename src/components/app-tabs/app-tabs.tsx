@@ -3,7 +3,6 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
 @Component({
   tag: "app-tabs",
   styleUrl: "app-tabs.css",
-  shadow: true,
 })
 export class AppTabs implements ComponentInterface {
   render() {

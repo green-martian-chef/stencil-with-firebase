@@ -4,7 +4,6 @@ import { Routes } from "../../routes";
 @Component({
   tag: "app-menu",
   styleUrl: "app-menu.css",
-  shadow: true,
 })
 export class AppMenu implements ComponentInterface {
   routes = Routes;
