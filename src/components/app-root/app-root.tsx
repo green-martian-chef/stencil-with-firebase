@@ -1,5 +1,4 @@
 import { Component, h } from "@stencil/core";
-import { AuthService } from "../../services/auth";
 
 @Component({
   tag: "app-root",
@@ -8,7 +7,6 @@ import { AuthService } from "../../services/auth";
 export class AppRoot {
   async componentDidLoad() {
     console.log("Component has been rendered");
-    console.log(AuthService.hello());
   }
   render() {
     return (
@@ -17,6 +15,7 @@ export class AppRoot {
         <ion-router useHash={false}>
           <ion-route url="/" component="app-home" />
           <ion-route url="/profile/:name" component="app-profile" />
+          <ion-route url="/auth" component="app-auth" />
           <ion-route url="/home" component="app-tabs">
             <ion-route url="/" component="app-tab-home">
               <ion-route component="app-tab-home" />
