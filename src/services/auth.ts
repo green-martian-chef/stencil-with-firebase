@@ -7,7 +7,7 @@ class AuthController {
   }
 
   private providerHandler(provider: any) {
-    return Firebase.auth.signInWithRedirect(provider);
+    return Firebase.auth.signInWithPopup(provider);
   }
 }
 

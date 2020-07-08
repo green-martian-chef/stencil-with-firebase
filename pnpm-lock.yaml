@@ -977,8 +977,8 @@ packages:
     resolution:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
 specifiers:
-  '@ionic/core': ^5.0.7
-  '@stencil/core': ^1.12.2
-  '@types/jest': ^26.0.3
+  '@ionic/core': ^5.2.3
+  '@stencil/core': ^1.16.0
+  '@types/jest': ^26.0.4
   firebase: ^7.15.5
   puppeteer: ^4.0.1
