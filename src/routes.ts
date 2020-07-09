@@ -24,6 +24,7 @@ const Routes: Array<{
     url: "/home",
     icon: "home",
   },
+  { type: "static", title: "Login", url: "/auth", icon: "home" },
 ];
 
 export { Routes };
